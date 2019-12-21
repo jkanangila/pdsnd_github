@@ -33,20 +33,25 @@ class Bikeshare(object):
     def __init__(self):
         
         # request wether the results should be displayed for a specific town only and get user reply
-        self.filter_by_town = self.input_request(("Would you like to filter the results by town? If yes enter the town's name or symbol. Else, type 'n'."
-                                 + "\nValid towns are: chicago (c), new york city (ny), washington (w). | "), 
+        self.filter_by_town = self.input_request((
+            """Would you like to filter the results by town? If yes enter the town's name or symbol. 
+            Else, type 'n'.\nValid towns are: chicago (c), new york city (ny), washington (w). | """
+            ), 
                                "Invalid characters found in your answer! Please make sure you spelled your answer corectly: ",
                               ('chicago', 'c', 'new_york_city','ny', 'washington', 'w', 'n'))
 
         # request wether the results should be displayed for a specific month only and get user reply
-        self.filter_by_month = self.input_request(("\nWould you like to see the results for a specific month only? \nIf yes enter the month's name"
-                                         + " or a number where 1 is for january. Else, type 'n'."
-                                         + "\nValid months are: january, february, march, april, may, june. | "), 
+        self.filter_by_month = self.input_request((
+            """\nWould you like to see the results for a specific month only?\nIf yes enter the month's name 
+            or a number where 1 is for january. Else, type 'n'.\nValid months are: january, february, march, april, may, june. | """
+            ), 
                                        "Invalid characters found in your answer! Please make sure you spelled your answer corectly:",
                                       ('april', 'february', 'january', 'june', 'march', 'may', 'n', '1','2','3','4','5','6'))
 
-        self.filter_by_day_of_week = self.input_request(("\nWould you like to see the results for a specific day of the week only? \nIf yes enter"
-                                                    + " the day's name or a number where 0 is for monday. Else, type 'n'. | \n"), 
+        self.filter_by_day_of_week = self.input_request((
+            """\nWould you like to see the results for a specific day of the week only? \nIf yes enter the day's name or a 
+            number where 0 is for monday. Else, type 'n'. | \n"""
+            ), 
                                        "Invalid characters found in your answer! Please make sure you spelled your answer corectly: ",
                                       ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 
                                        'saturday', 'sunday', 'n', '0','1','2','3','4','5', '6'))
