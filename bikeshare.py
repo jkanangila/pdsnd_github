@@ -1,7 +1,7 @@
 import pandas as pd
 from time import sleep as seconds
 
-sleep = 8
+sleep = 2
 
 class Bikeshare(object):
     
