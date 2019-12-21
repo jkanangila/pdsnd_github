@@ -151,7 +151,8 @@ class Bikeshare(object):
                 continue
             elif i in ('Age Group', 'Gender') and self.filter_by_town in ('washington', 'w', 'n'):
                 continue
-                
+            
+            # section for printing columns containing texts
             try:
                 print("There were {p[value_count]} {}s. ".format(i.lower(), p=s[i])
                 + "\nThe most popular {} was '{p[most_popular]}' with a frequency of {p[freq_most_popular]}".format(i.lower(), p=s[i])
@@ -159,11 +160,13 @@ class Bikeshare(object):
                 print("\nProcesssing data, standby...\n")
                 seconds(sleep)
             except:
+                # section for printing columns containing numeric data
                 try:
                     print("The maximum {} was {p[max]}, the average was {p[mean]}, and the minimum was {p[min]}\n".format(
                         i.lower(), i.lower(), i.lower(), p=s[i]))
                     print("\nProcesssing data, standby...\n")
                     seconds(sleep)
+                # section for printing columns containing datetime
                 except:
                     for j in s[i].keys():
                         try:
