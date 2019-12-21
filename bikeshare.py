@@ -1,6 +1,8 @@
 import pandas as pd
 from time import sleep as seconds
 
+sleep = 8
+
 class Bikeshare(object):
     
     @staticmethod
@@ -145,7 +147,6 @@ class Bikeshare(object):
         """Print descriptive statistics for each columns in the filtered dataframe"""
         print("\n\nGathering and processing data, standby...\n")
         s = self.basic_stas()
-        sleep = 8
         for i in ['Start Station', 'End Station', 'Trip Duration', 'Age Group', 'Gender', 'User Type', 'Start Time', 'End Time']:
             if i == 'Unnamed: 0':
                 continue
