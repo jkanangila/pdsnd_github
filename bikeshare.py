@@ -185,6 +185,7 @@ class Bikeshare(object):
         print("\nProcesssing request. standby...\n")
         raw_data = self.load_data()
         start, stop = 0, 5
+        # while loop to 5 rows of raw data until either: the user enters "n" or the there are no more raw data to display
         while request == 'y':
             print(raw_data[start:stop])
             print("")
